@@ -1,0 +1,99 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    overflow: hidden;
+    background: linear-gradient(to bottom right, rgb(34, 174, 255), purple);
+}
+.main{
+    background-color: white;
+    padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+     
+        border-radius: 20px;
+
+}
+.logo{
+    width: 100px;
+}
+.fa-solid{
+   font-size: 30px;
+}
+
+.top{
+       display: flex;
+    justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        
+
+}
+
+.bluebotas{
+    width: 400px;
+}
+h1{
+    margin-top: -70px;
+}
+p{
+    margin-top: -20px;
+    color: gray;
+}
+
+ .fa-star{
+    font-size: 20px;
+ }
+ .fa-star-half-stroke
+ {
+    font-size: 20px;
+ }
+ .middle{
+display: flex;
+justify-content: space-between;
+ }
+.middleleft{
+    display:  flex;
+    align-items: center;
+    gap: 10px;
+}
+ .blue{
+height: 20px;
+width: 20px;
+border-radius: 100%;
+background-color: blue;
+ }
+ .red{
+    height: 20px;
+width: 20px;
+border-radius: 100%;
+background-color: red;
+ }
+
+ .yellow{
+    height: 20px;
+width: 20px;
+border-radius: 100%;
+background-color: yellow;
+ }
+
+ h3{
+    font-size: 30px;
+    color: rgb(90, 88, 88);
+ }
+
+ .addtocart{
+    color: white;
+    background:  linear-gradient(to bottom right , rgb(34, 174, 255), purple );
+    height: 50px;
+    border-radius: 100px;
+    border: none;
+ }
+ .addtocart:hover{
+background: linear-gradient(to bottom right , purple,  rgb(34, 174, 255));
+transition: 10s;
+
+}
