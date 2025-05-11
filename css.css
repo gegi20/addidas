@@ -1,99 +1,169 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 
-    overflow: hidden;
-    background: linear-gradient(to bottom right, rgb(34, 174, 255), purple);
+  overflow: hidden;
+  background: linear-gradient(to bottom right, rgb(34, 174, 255), purple);
 }
-.main{
-    background-color: white;
-    padding: 20px;
+.main {
+  background-color: white;
+  padding: 20px;
+  height: 650px;
+  width: 400px;
 
-        display: flex;
-        flex-direction: column;
-     
-        border-radius: 20px;
+  display: flex;
+  flex-direction: column;
 
+  border-radius: 20px;
 }
-.logo{
-    width: 100px;
+.logo {
+  width: 100px;
 }
-.fa-solid{
-   font-size: 30px;
+.fa-solid {
+  font-size: 30px;
 }
-
-.top{
-       display: flex;
-    justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        
-
+.fa-solid:hover {
+  cursor: pointer;
 }
 
-.bluebotas{
-    width: 400px;
-}
-h1{
-    margin-top: -70px;
-}
-p{
-    margin-top: -20px;
-    color: gray;
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
- .fa-star{
-    font-size: 20px;
- }
- .fa-star-half-stroke
- {
-    font-size: 20px;
- }
- .middle{
-display: flex;
-justify-content: space-between;
- }
-.middleleft{
-    display:  flex;
-    align-items: center;
-    gap: 10px;
+.bluebotas {
+  width: 400px;
 }
- .blue{
-height: 20px;
-width: 20px;
-border-radius: 100%;
-background-color: blue;
- }
- .red{
-    height: 20px;
-width: 20px;
-border-radius: 100%;
-background-color: red;
- }
+h1 {
+  margin-top: -70px;
+}
+p {
+  margin-top: -20px;
+  color: gray;
+}
 
- .yellow{
-    height: 20px;
-width: 20px;
-border-radius: 100%;
-background-color: yellow;
- }
+.fa-star {
+  font-size: 20px;
+}
+.fa-star-half-stroke {
+  font-size: 20px;
+}
+.middle {
+  display: flex;
+  justify-content: space-between;
+}
+.middleleft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.blue {
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background-color: blue;
 
- h3{
-    font-size: 30px;
-    color: rgb(90, 88, 88);
- }
+  transition: 0.1s;
+}
+.blue:hover {
+  outline: 2px solid blue;
+  outline-offset: 2px;
+}
 
- .addtocart{
-    color: white;
-    background:  linear-gradient(to bottom right , rgb(34, 174, 255), purple );
-    height: 50px;
-    border-radius: 100px;
-    border: none;
- }
- .addtocart:hover{
-background: linear-gradient(to bottom right , purple,  rgb(34, 174, 255));
-transition: 10s;
+.red {
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background-color: red;
+  transition: 0.1;
+}
+.red:hover {
+  outline: 2px solid red;
+  outline-offset: 2px;
+}
 
+.yellow {
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background-color: yellow;
+}
+.yellow:hover {
+  outline: 2px solid rgb(216, 216, 51);
+  outline-offset: 2px;
+}
+
+h3 {
+  font-size: 30px;
+  color: rgb(90, 88, 88);
+}
+
+.addtocart {
+  position: relative;
+  color: white;
+  background: linear-gradient(to bottom right, rgb(34, 174, 255), purple);
+  height: 70px;
+  border-radius: 100px;
+  border: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.addtocart::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, purple, rgb(34, 174, 255));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.addtocart:hover::before {
+  opacity: 1;
+}
+.images {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.front {
+  z-index: 2;
+}
+
+.bluebotas {
+  transform: rotate(25deg);
+  border-radius: 100%;
+  position: absolute;
+  width: 100%;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+.pinkbotas {
+  transform: rotate(25deg);
+  border-radius: 100%;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.yellowbotas {
+  transform: rotate(25deg);
+  border-radius: 100%;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
